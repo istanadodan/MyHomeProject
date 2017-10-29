@@ -1,0 +1,34 @@
+{
+  "name": "img.co.kr",
+  "version": "1.0.0",
+  "description": "image slider",
+  "main": "app.js",
+  "scripts": {
+    "test": "start"
+  },
+ "dependencies" : {
+    "bcryptjs":"*",
+    "body-parser":"*",
+    "connect-flash":"*",
+    "cookie-parser":"^1.4.1",
+    "express":"*",
+    "express-handlebars":"*",
+    "express-messages ":"*",
+    "express-session":"*",
+    "express-validator":"*",
+    "mongodb":"*",
+    "mongoose":"*",
+    "passport":"*",
+    "passport-http":"*",
+    "passport-local":"*" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "ImageSliderApp"
+  },
+  "keywords": [
+    "image"
+  ],
+  "author": "DY KWON",
+  "license": "ISC"
+}

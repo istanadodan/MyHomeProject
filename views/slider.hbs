@@ -1,0 +1,31 @@
+<div ng-controller="CommonCtrl" class="card" id="outter" ng-init="init();mLoc=loc.home;">
+
+		<div id="header" class="container">
+			<div class="col-sm-2"></div>
+			<div class="col-sm-8 form-inline">
+				<div class="form-group">
+			    	<select class="form-control" ng-model="folder" ng-options="x for x in jsonFolder" ng-change="doMedi(STATUS.FOLDER, folder)"></select>
+					<select class="form-control" ng-model="imgSize" ng-options="k for k in imgSizes"></select>
+					<input class="form-control" type="text" ng-model="query" placeholder="image folder name"/>
+					<input class="form-control" type="checkbox" ng-model="capOnOff">caption
+				</div>
+			</div>
+			<div class="col-sm-2">
+				<select class="form-control bg-warning" ng-model="mLoc"  ng-options="x for (x,y) in loc" ng-change="callRouter(mLoc,0,$event)"></select>
+			</div>
+		</div>
+		
+	<div class="container">
+		<div class="row">
+		<div class="col-lg-3">
+		<img src="/album/img/default.jpg" width="240px">
+		</div>
+		<div class="col-lg-3">
+		<img src="/album/160302-준석중학입학/20160302_151148_HDR.jpg" width="240px">
+		</div>
+		<div class="col-lg-3">
+		<img src="/album/160302-준석중학입학/20160302_151148_HDR.jpg" width="240px">
+		</div>
+		</div>
+	</div>
+</div>	

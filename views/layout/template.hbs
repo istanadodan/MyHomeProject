@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="slider">
+<head>
+	<title>My Ablum</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/style.css">	
+</head>
+<body>
+
+	<nav class="navbar navbar-default navbar-link">
+	<div class="container">
+	<div class="row">
+	   <div class="navbar-header col-lg-8 col-sm-6 col-xs-4">
+	     <a class="navbar-brand" href="#">My Slider <small> [Album 2016]</small></a>
+	   </div>
+	   <ul class="nav navbar-nav col-lg-4 col-sm-6 col-xs-8">
+	     <li class="active"><a href="/">Home</a></li>
+	     <li><a href="/manage/revenue">비용관리</a></li>
+	     <li><a href="/users/slider">사진관리</a></li>
+	     <li class="dropdown">
+	       <a class="dropdown-toggle" data-toggle="dropdown" href="#">메모정리
+	       <span class="caret"></span></a>
+	       <ul class="dropdown-menu">
+	         <li><a href="#">프로젝트</a></li>
+	         <li><a href="#">3줄일기</a></li>
+	         <li><a href="#">해야할일</a></li>
+	       </ul>
+	     </li>
+	   </ul>
+	 </div>  
+	 </div>
+	</nav>
+
+    <div class="album text-muted">
+    <div class="container">
+    {{{body}}}
+    </div>
+    </div>
+
+    <footer class="text-muted">
+      <div class="container">        
+        <span id="message" ng-bind="message" class="text-warning">message</span>
+        <p class="text-kbd text-right">made by dy kwon in Oct.8 2017</p>
+      </div>
+    </footer>
+
+	<script src="/js/assets/jquery.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <script type="text/javascript" src="/js/Slider.js"></script>
+    <script type="text/javascript" src="/js/service/util.js"></script>
+    <script type="text/javascript" src="/js/service/medi.js"></script>
+    <script type="text/javascript" src="/js/service/album.js"></script>
+    <script type="text/javascript" src="/js/service/albumModel.js"></script>
+    <script type="text/javascript" src="/js/service/jsonRepository.js"></script>
+    <script type="text/javascript" src="/js/service/getDb_expense.js"></script>
+    <script type="text/javascript" src="/js/service/envStat.js"></script>
+    <script type="text/javascript" src="/js/service/imgLayout.js"></script> 
+    <script type="text/javascript" src="/js/directive/registerDtv.js"></script> 
+    <script type="text/javascript" src="/js/directive/sliderDtv.js"></script> 
+    <script type="text/javascript" src="/js/directive/listDtv.js"></script> 
+    <script type="text/javascript" src="/js/controllers/CommonCtrl.js"></script>
+    <script type="text/javascript" src="/js/controllers/listCtrl.js"></script>
+    <script type="text/javascript" src="/js/controllers/sliderCtrl.js"></script>
+    <script type="text/javascript" src="/js/controllers/registerCtrl.js"></script>
+    <script type="text/javascript" src="/js/controllers/revenueCtrl.js"></script>
+</body>
+</html>

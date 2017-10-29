@@ -1,0 +1,15 @@
+
+<div ng-controller="CommonCtrl" class="card" id="outter" ng-init="init();mLoc=loc.home;">
+
+		<div id="navbar" class="container">
+			<div id="logoArea" class="row col-5-offset-5">
+				<img class="img-thumbnail img-responsive" src="{[{LOGO_URL}]}" ng-click="callRouter('list', 0, $event)">
+			</div>
+		</div>	
+		
+		<div id="footer" ng-hide="true">
+			<span id="message" ng-bind="message" style="color:white;">message</span>
+			<span id="layout"></span>
+		</div>		
+		
+</div>

@@ -1,0 +1,48 @@
+<div class="container" ng-controller="ctrl_revenue as ctrl">
+
+	<form class="form-inline">
+	<label for="query" class="control-label">찾을문자: </label>
+	<input type="text" id="query" ng-model="query" class="form-control">
+	<div class="form-control dropdown">
+		<a class="dropdown-toggle" data-toggle="dropdown" href="#">선택</a>
+		<ul class="dropdown-menu">
+			<li class="btn"><a href="#" ng-click="">name</a></li>
+			<li class="btn"><a  href="#" ng-click="">category</a></li>
+		</ul>
+	</div>
+
+	<div class="btn-group btn-group-sm pull-right">
+	<button class="btn btn-info" ng-click="ctrl.createForm();"><span class="glyphicon glyphicon-plus"></span></button>
+	<button class="btn btn-info" ng-click="ctrl.dropForm();"><span class="glyphicon glyphicon-minus"></span></button>
+	<button class="btn btn-info" ng-click="ctrl.deleteData();"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+	<button class="btn btn-info" ng-click="ctrl.sendData();"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
+	</div>
+	</form>	
+	
+	<table class="table table-hover">
+	<caption>비용관리 made by DY KWON</caption>
+	<thead>
+	<tr class="">
+		<th>-</th>
+		<th>품명</th>
+		<th>카테고리</th>
+		<th>사용날짜</th>
+		<th>사용금액</th>
+		<th>장소</th>
+		<th>결제방법</th>		
+	</tr>
+	</thead>
+	<tbody>
+	<tr class="info" ng-repeat="item in ctrl.record|filter:{$:query}" ng-click="item.flag=!item.flag">
+		<td><input type="checkbox" class="col-lg" ng-model="item.flag" ng-checked="item.flag"></td>
+		<td><input type="text" ng-model="item.item_name"></td>
+		<td><input type="text" ng-model="item.category"></td>
+		<td><input type="text" ng-model="item.dte"></td>
+		<td><input type="text" ng-model="item.amount"></td>
+		<td><input type="text" ng-model="item.place"></td>
+		<td><input type="text" ng-model="item.pay_method"></td>
+	</tr>
+	</tbody>
+	</table>
+
+</div>
